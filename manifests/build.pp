@@ -14,7 +14,7 @@ define docker::build(
       ensure => directory,
       owner  => root,
       group  => docker,
-      mode   => 750,
+      mode   => "750",
   }
   exec { "build-${image}-${tag}":
       cwd => $tmp,
